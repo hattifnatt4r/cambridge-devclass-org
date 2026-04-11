@@ -16,6 +16,7 @@ html {
 
 body {
   color: #1a1a1a;
+  color: rgba(0,0,0,1);
   background: #fff;
   width: 100%;
 }
@@ -39,7 +40,7 @@ nav .brand {
 nav a {
   font-size: 1rem;
   text-decoration: none;
-  color: rgba(0,0,0,0.99);
+  color: #1a1a1a;
 }
 
 nav a:hover { color: #555; }
@@ -62,7 +63,7 @@ nav .nav-icons a {
   opacity: 0.8;
 }
 
-nav .nav-icons a:hover { color: #1a1a1a; }
+nav .nav-icons a:hover { opacity: 1; }
 
 nav .nav-icons img {
   width: 22px;
@@ -79,28 +80,21 @@ main {
 
 /* HERO */
 .hero {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 24px;
   margin-top: min(4rem, 7dvh);
   margin-bottom: 2rem;
 }
 
 .hero-text {
-  flex: 1;
-  min-width: 260px;
   padding-top: 1.5rem;
   max-width: 39rem;
-  margin-bottom: 1rem;
+  margin: 1rem auto 1rem;
 }
 
 .hero-text h1 {
   font-size: min(2.2rem, 11vw);
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   letter-spacing: -0.5px;
-  /* text-transform: uppercase; */
   color: rgba(0,0,0,0.85);
   line-height: 1.15;
 }
@@ -112,38 +106,25 @@ main {
 }
 
 .hero-text p {
-  font-size: 1.07rem;
+  /* font-size: 1.07rem; */
   line-height: 1.7rem;
-  /*
-  font-weight: 600;
-  color: rgba(0,0,0,0.8);
-  */
   margin-bottom: 0.6rem;
 }
 
-.hero-image {
-  max-width: min(18rem, 20vw);
-  max-width: 18rem;
-  margin: -2rem 0 -3rem -2rem;
-}
-
-.hero-image img {
-  width: 140%;
-  height: auto;
-  opacity: 0.87;
-  margin-left: -10%;
-}
-
-@media (max-width: 700px) {
-  .hero-image { display: none; }
+p.subtitle {
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-size: 1.05rem;
+  margin-top: -0rem;
 }
 
 /* INFO ITEMS */
 .info-list {
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin-bottom: 3.2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 39rem;
+  margin: 0 auto 4rem;
 }
 
 .info-item {
@@ -198,6 +179,11 @@ main {
 }
 
 /* ABOUT */
+.about {
+  max-width: 39rem;
+  margin: 0 auto;
+}
+
 .about h2 {
   font-size: 1.05rem;
   font-weight: 600;
@@ -206,12 +192,13 @@ main {
 
 .about ul {
   list-style: none;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .about ul li {
   font-size: 1rem;
   color: #333;
+  color: rgba(0,0,0,1);
   padding: 2px 0;
   display: flex;
   align-items: baseline;
@@ -219,7 +206,8 @@ main {
 }
 
 .about ul li::before {
-  content: "·";
+  content: "•";
+  font-weight: 700;
   font-size: 1.2rem;
   line-height: 1;
   color: #555;
@@ -229,6 +217,7 @@ main {
 /* PHOTOS */
 .photos {
   display: flex;
+  justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
 }
